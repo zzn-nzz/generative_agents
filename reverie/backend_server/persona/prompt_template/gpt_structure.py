@@ -195,33 +195,52 @@ def ChatGPT_safe_generate_response_OLD(prompt,
 # ============================================================================
 
 def GPT_request(prompt, gpt_parameter): 
-  """
-  Given a prompt and a dictionary of GPT parameters, make a request to OpenAI
-  server and returns the response. 
-  ARGS:
-    prompt: a str prompt
-    gpt_parameter: a python dictionary with the keys indicating the names of  
-                   the parameter and the values indicating the parameter 
-                   values.   
-  RETURNS: 
-    a str of GPT-3's response. 
-  """
-  temp_sleep()
-  try: 
-    response = openai.Completion.create(
-                model=gpt_parameter["engine"],
-                prompt=prompt,
-                temperature=gpt_parameter["temperature"],
-                max_tokens=gpt_parameter["max_tokens"],
-                top_p=gpt_parameter["top_p"],
-                frequency_penalty=gpt_parameter["frequency_penalty"],
-                presence_penalty=gpt_parameter["presence_penalty"],
-                stream=gpt_parameter["stream"],
-                stop=gpt_parameter["stop"],)
-    return response.choices[0].text
-  except: 
-    print ("TOKEN LIMIT EXCEEDED")
-    return "TOKEN LIMIT EXCEEDED"
+    """
+    Given a prompt and a dictionary of GPT parameters, make a request to OpenAI
+    server and returns the response. 
+    ARGS:
+        prompt: a str prompt
+        gpt_parameter: a python dictionary with the keys indicating the names of  
+                    the parameter and the values indicating the parameter 
+                    values.   
+    RETURNS: 
+        a str of GPT-3's response. 
+    """
+    temp_sleep()
+    try: 
+        response = openai.ChatCompletion.create(
+                    model=gpt_parameter["engine"],
+                    messages=[{"role": "user", "content": prompt}],
+                    temperature=gpt_parameter["temperature"],
+                    max_tokens=gpt_parameter["max_tokens"],
+                    top_p=gpt_parameter["top_p"],
+                    frequency_penalty=gpt_parameter["frequency_penalty"],
+                    presence_penalty=gpt_parameter["presence_penalty"],
+                    stream=gpt_parameter["stream"],
+                    stop=gpt_parameter["stop"],)
+        return response.choices[0].message.content
+    except openai.error.InvalidRequestError as e:
+        print(f"Invalid request: {e}")
+        return "Invalid request error occurred"
+    except openai.error.RateLimitError as e:
+        print(f"Rate limit exceeded: {e}")
+        return "Rate limit exceeded error occurred"
+    except openai.error.AuthenticationError as e:
+        print(f"Authentication error: {e}")
+        return "Authentication error occurred"
+    except openai.error.APIConnectionError as e:
+        print(f"API connection error: {e}")
+        return "API connection error occurred"
+    except openai.error.APIError as e:
+        print(f"API error: {e}")
+        return "API error occurred"
+    except openai.error.OpenAIError as e:
+        print(f"An OpenAI error occurred: {e}")
+        return "An OpenAI error occurred"
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        return "An unexpected error occurred"
+
 
 
 def generate_prompt(curr_input, prompt_lib_file): 
@@ -273,7 +292,7 @@ def safe_generate_response(prompt,
   return fail_safe_response
 
 
-def get_embedding(text, model="text-embedding-ada-002"):
+def get_embedding(text, model="text-embedding-3-large"):
   text = text.replace("\n", " ")
   if not text: 
     text = "this is blank"
@@ -282,7 +301,7 @@ def get_embedding(text, model="text-embedding-ada-002"):
 
 
 if __name__ == '__main__':
-  gpt_parameter = {"engine": "text-davinci-003", "max_tokens": 50, 
+  gpt_parameter = {"engine": "gpt-3.5-turbo-instruct", "max_tokens": 4096, 
                    "temperature": 0, "top_p": 1, "stream": False,
                    "frequency_penalty": 0, "presence_penalty": 0, 
                    "stop": ['"']}

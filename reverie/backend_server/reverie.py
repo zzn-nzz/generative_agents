@@ -340,9 +340,11 @@ class ReverieServer:
             curr_tile = self.personas_tile[persona_name]
             # <new_tile> is the tile that the persona will move to right now,
             # during this cycle. 
+            print(curr_tile)
             new_tile = (new_env[persona_name]["x"], 
                         new_env[persona_name]["y"])
-
+            # new_tile = (curr_tile[0] + 5, curr_tile[1] + 5)
+            print(new_tile)
             # We actually move the persona on the backend tile map here. 
             self.personas_tile[persona_name] = new_tile
             self.maze.remove_subject_events_from_tile(persona.name, curr_tile)
@@ -397,6 +399,9 @@ class ReverieServer:
           # {"persona": {"Maria Lopez": {"movement": [58, 9]}},
           #  "persona": {"Klaus Mueller": {"movement": [38, 12]}}, 
           #  "meta": {curr_time: <datetime>}}
+          curr_move_path = f"{sim_folder}/movement"
+          if not os.path.exists(curr_move_path):
+            os.makedirs(curr_move_path)
           curr_move_file = f"{sim_folder}/movement/{self.step}.json"
           with open(curr_move_file, "w") as outfile: 
             outfile.write(json.dumps(movements, indent=2))
