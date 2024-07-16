@@ -26,21 +26,21 @@
 
 	// Phaser 3.0 global settings. 
 	// Configuration meant to be passed to the main Phaser game instance. 
-	const config = {
-	  type: Phaser.AUTO,
-	  width: 1500,
-	  height: 800,
-	  parent: "game-container",
-	  pixelArt: true,
-	  physics: {
-	    default: "arcade",
-	    arcade: {
-	      gravity: { y: 0 } } },
-	  scene: {
-	    preload: preload,
-	    create: create,
-	    update: update },
-	  scale: {zoom: 0.8} };
+	// const config = {
+	//   type: Phaser.AUTO,
+	//   width: 1500,
+	//   height: 800,
+	//   parent: "game-container",
+	//   pixelArt: true,
+	//   physics: {
+	//     default: "arcade",
+	//     arcade: {
+	//       gravity: { y: 0 } } },
+	//   scene: {
+	//     preload: preload,
+	//     create: create,
+	//     update: update },
+	//   scale: {zoom: 0.8} };
 
 	// const config = {
 	//   type: Phaser.AUTO,
@@ -57,6 +57,27 @@
 	//     create: create,
 	//     update: update },
 	//   scale: {zoom: 1} };
+
+	const config = {
+  type: Phaser.AUTO,
+  width: 4480,
+  height: 3200,
+  parent: "game-container",
+  pixelArt: true,
+  physics: {
+    default: "arcade",
+    arcade: {
+      gravity: { y: 0 }
+    }
+  },
+  scene: {
+    preload: preload,
+    create: create,
+    update: update
+  },
+  scale: { zoom: 0.10 } 
+};
+
 
 
 	// Creating the game instance and setting up the main Phaser variables that  
