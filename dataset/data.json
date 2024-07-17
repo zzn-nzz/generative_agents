@@ -1,0 +1,30 @@
+[
+  {
+    "Name": "Noisy Novel",
+    "Context": "Tom is attempting to complete his novel today.",
+    "Desire": "Tom wants to finish his novel undisturbed.",
+    "Belief": "Tom believes that his neighbor will be considerate and quite.",
+    "Outcome": "Tom's neighbor constantly makes loud noise and distractions.",
+    "Emotion": "Tom feels angry and overwhelmed.",
+    "Action": "Tom decides to knock on his neighbor's door and confronts his neighbor about the noise.",
+    "Emotional Expression": "Angry Emoji",
+    "Opposing Desire": "Tom hopes he can complete his novel in a noisy environment because it will inspire him more.",
+    "Opposing Belief": "Tom believes that his neighbor will be loud and noisy.",
+    "Opposing Outcome": "Tom's neighbor is quiet and peaceful today.",
+    "Opposing Emotion": "Tom feels happy and content.",
+    "Opposing Action": "Tom stays at home in peace.",
+    "Opposing Expression": "Happy, Satisfied Emoji",
+    "Desire_visual": "null",
+    "Belief_visual": "null",
+    "Outcome_visual": "../environment/frontend_server/saved_images/Noisy Novel/outcome.jpg",
+    "Emotion_visual": "../environment/frontend_server/saved_images/Noisy Novel/",
+    "Action_visual": "null",
+    "Emotional Expression_visual": "../environment/frontend_server/saved_images/Noisy Novel/expression.jpg",
+    "Opposing Desire_visual": "null",
+    "Opposing Belief_visual": "null",
+    "Opposing Outcome_visual": "../environment/frontend_server/saved_images/Noisy Novel/opposing_outcome.jpg",
+    "Opposing Emotion_visual": "null",
+    "Opposing Action_visual": "null",
+    "Opposing Expression_visual": "../environment/frontend_server/saved_images/Noisy Novel/opposing_expression.jpg"
+  }
+]
