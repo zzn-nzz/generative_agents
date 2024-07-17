@@ -1,0 +1,1226 @@
+{
+  "the Ville:Giorgio Rossi's apartment": [
+    90,
+    24
+  ],
+  "the Ville:Giorgio Rossi's apartment:bathroom": [
+    87,
+    13
+  ],
+  "the Ville:Carlos Gomez's apartment": [
+    95,
+    20
+  ],
+  "the Ville:Carlos Gomez's apartment:bathroom": [
+    95,
+    14
+  ],
+  "the Ville:Arthur Burton's apartment": [
+    63,
+    16
+  ],
+  "the Ville:Arthur Burton's apartment:main room": [
+    54,
+    16
+  ],
+  "the Ville:Arthur Burton's apartment:bathroom": [
+    62,
+    14
+  ],
+  "the Ville:Ryan Park's apartment": [
+    64,
+    14
+  ],
+  "the Ville:Ryan Park's apartment:bathroom": [
+    67,
+    13
+  ],
+  "the Ville:Isabella Rodriguez's apartment": [
+    73,
+    14
+  ],
+  "the Ville:Isabella Rodriguez's apartment:main room": [
+    73,
+    14
+  ],
+  "the Ville:Isabella Rodriguez's apartment:bathroom": [
+    82,
+    13
+  ],
+  "the Ville:Giorgio Rossi's apartment:bathroom:shower": [
+    87,
+    13
+  ],
+  "the Ville:Giorgio Rossi's apartment:bathroom:bathroom sink": [
+    88,
+    13
+  ],
+  "the Ville:Giorgio Rossi's apartment:bathroom:toilet": [
+    90,
+    13
+  ],
+  "the Ville:Carlos Gomez's apartment:bathroom:shower": [
+    93,
+    13
+  ],
+  "the Ville:Carlos Gomez's apartment:bathroom:bathroom sink": [
+    95,
+    13
+  ],
+  "the Ville:Carlos Gomez's apartment:bathroom:toilet": [
+    97,
+    13
+  ],
+  "the Ville:Arthur Burton's apartment:main room:bed": [
+    54,
+    14
+  ],
+  "<spawn_loc>sp-A": [
+    36,
+    65
+  ],
+  "<spawn_loc>sp-B": [
+    37,
+    65
+  ],
+  "the Ville:Arthur Burton's apartment:main room:refrigerator": [
+    55,
+    14
+  ],
+  "the Ville:Arthur Burton's apartment:main room:closet": [
+    56,
+    14
+  ],
+  "the Ville:Arthur Burton's apartment:main room:shelf": [
+    57,
+    14
+  ],
+  "the Ville:Arthur Burton's apartment:bathroom:shower": [
+    60,
+    14
+  ],
+  "the Ville:Arthur Burton's apartment:bathroom:toilet": [
+    62,
+    14
+  ],
+  "the Ville:Ryan Park's apartment:bathroom:shower": [
+    65,
+    14
+  ],
+  "the Ville:Ryan Park's apartment:bathroom:bathroom sink": [
+    67,
+    14
+  ],
+  "the Ville:Ryan Park's apartment:bathroom:toilet": [
+    69,
+    14
+  ],
+  "the Ville:Isabella Rodriguez's apartment:main room:bed": [
+    73,
+    14
+  ],
+  "the Ville:Isabella Rodriguez's apartment:main room:refrigerator": [
+    75,
+    14
+  ],
+  "the Ville:Isabella Rodriguez's apartment:main room:closet": [
+    76,
+    14
+  ],
+  "the Ville:Isabella Rodriguez's apartment:main room:shelf": [
+    78,
+    14
+  ],
+  "the Ville:Isabella Rodriguez's apartment:bathroom:shower": [
+    81,
+    14
+  ],
+  "the Ville:Isabella Rodriguez's apartment:bathroom:toilet": [
+    83,
+    14
+  ],
+  "the Ville:Arthur Burton's apartment:main room:guitar": [
+    53,
+    16
+  ],
+  "the Ville:Arthur Burton's apartment:bathroom:bathroom sink": [
+    61,
+    16
+  ],
+  "the Ville:Isabella Rodriguez's apartment:main room:desk": [
+    73,
+    16
+  ],
+  "the Ville:Isabella Rodriguez's apartment:bathroom:bathroom sink": [
+    82,
+    16
+  ],
+  "the Ville:artist's co-living space": [
+    15,
+    21
+  ],
+  "the Ville:artist's co-living space:Latoya Williams's room": [
+    15,
+    21
+  ],
+  "the Ville:artist's co-living space:Latoya Williams's bathroom": [
+    22,
+    18
+  ],
+  "the Ville:artist's co-living space:Rajiv Patel's room": [
+    26,
+    21
+  ],
+  "the Ville:artist's co-living space:Rajiv Patel's bathroom": [
+    32,
+    21
+  ],
+  "the Ville:artist's co-living space:Abigail Chen's room": [
+    38,
+    23
+  ],
+  "the Ville:Arthur Burton's apartment:main room:desk": [
+    54,
+    17
+  ],
+  "the Ville:Hobbs Cafe": [
+    79,
+    24
+  ],
+  "the Ville:Giorgio Rossi's apartment:main room": [
+    90,
+    24
+  ],
+  "the Ville:Carlos Gomez's apartment:main room": [
+    95,
+    20
+  ],
+  "the Ville:artist's co-living space:Latoya Williams's room:bed": [
+    16,
+    18
+  ],
+  "the Ville:artist's co-living space:Latoya Williams's bathroom:shower": [
+    20,
+    18
+  ],
+  "the Ville:artist's co-living space:Latoya Williams's bathroom:toilet": [
+    22,
+    18
+  ],
+  "the Ville:artist's co-living space:Rajiv Patel's room:bed": [
+    25,
+    18
+  ],
+  "the Ville:artist's co-living space:Rajiv Patel's bathroom:shower": [
+    30,
+    18
+  ],
+  "the Ville:artist's co-living space:Rajiv Patel's bathroom:toilet": [
+    32,
+    18
+  ],
+  "the Ville:artist's co-living space:Abigail Chen's room:bed": [
+    36,
+    18
+  ],
+  "the Ville:artist's co-living space:Abigail Chen's room:closet": [
+    40,
+    18
+  ],
+  "the Ville:The Rose and Crown Pub": [
+    62,
+    26
+  ],
+  "the Ville:Ryan Park's apartment:main room": [
+    68,
+    24
+  ],
+  "the Ville:Giorgio Rossi's apartment:main room:bed": [
+    87,
+    18
+  ],
+  "the Ville:Giorgio Rossi's apartment:main room:refrigerator": [
+    90,
+    18
+  ],
+  "the Ville:Carlos Gomez's apartment:main room:bed": [
+    93,
+    18
+  ],
+  "the Ville:Carlos Gomez's apartment:main room:refrigerator": [
+    97,
+    18
+  ],
+  "the Ville:artist's co-living space:Latoya Williams's room:closet": [
+    17,
+    19
+  ],
+  "the Ville:artist's co-living space:Rajiv Patel's room:closet": [
+    27,
+    19
+  ],
+  "the Ville:Ryan Park's apartment:main room:bed": [
+    65,
+    19
+  ],
+  "the Ville:Ryan Park's apartment:main room:refrigerator": [
+    69,
+    19
+  ],
+  "the Ville:Hobbs Cafe:cafe": [
+    79,
+    24
+  ],
+  "the Ville:Hobbs Cafe:cafe:refrigerator": [
+    73,
+    19
+  ],
+  "the Ville:Hobbs Cafe:cafe:cooking area": [
+    76,
+    19
+  ],
+  "the Ville:Hobbs Cafe:cafe:kitchen sink": [
+    77,
+    19
+  ],
+  "the Ville:Hobbs Cafe:cafe:behind the cafe counter": [
+    81,
+    19
+  ],
+  "the Ville:Oak Hill College": [
+    114,
+    24
+  ],
+  "the Ville:Oak Hill College:classroom": [
+    114,
+    24
+  ],
+  "the Ville:Oak Hill College:library": [
+    122,
+    25
+  ],
+  "the Ville:artist's co-living space:Latoya Williams's room:desk": [
+    16,
+    20
+  ],
+  "the Ville:artist's co-living space:Abigail Chen's bathroom": [
+    38,
+    20
+  ],
+  "the Ville:The Rose and Crown Pub:pub": [
+    57,
+    24
+  ],
+  "the Ville:The Rose and Crown Pub:pub:refrigerator": [
+    56,
+    20
+  ],
+  "the Ville:The Rose and Crown Pub:pub:behind the bar counter": [
+    59,
+    20
+  ],
+  "the Ville:The Rose and Crown Pub:pub:kitchen sink": [
+    60,
+    20
+  ],
+  "the Ville:The Rose and Crown Pub:pub:cooking area": [
+    62,
+    20
+  ],
+  "the Ville:Giorgio Rossi's apartment:main room:cooking area": [
+    89,
+    20
+  ],
+  "the Ville:Carlos Gomez's apartment:main room:cooking area": [
+    96,
+    20
+  ],
+  "the Ville:Oak Hill College:classroom:blackboard": [
+    108,
+    20
+  ],
+  "the Ville:Oak Hill College:library:library sofa": [
+    119,
+    20
+  ],
+  "the Ville:Oak Hill College:library:bookshelf": [
+    121,
+    20
+  ],
+  "the Ville:artist's co-living space:Latoya Williams's room:shelf": [
+    16,
+    21
+  ],
+  "the Ville:artist's co-living space:Latoya Williams's bathroom:bathroom sink": [
+    21,
+    21
+  ],
+  "the Ville:artist's co-living space:Rajiv Patel's room:guitar": [
+    28,
+    21
+  ],
+  "the Ville:artist's co-living space:Rajiv Patel's bathroom:bathroom sink": [
+    31,
+    22
+  ],
+  "the Ville:artist's co-living space:Abigail Chen's bathroom:bathroom sink": [
+    38,
+    21
+  ],
+  "the Ville:artist's co-living space:Abigail Chen's bathroom:toilet": [
+    40,
+    21
+  ],
+  "the Ville:artist's co-living space:Abigail Chen's bathroom:shower": [
+    42,
+    21
+  ],
+  "the Ville:Ryan Park's apartment:main room:cooking area": [
+    68,
+    21
+  ],
+  "the Ville:Hobbs Cafe:cafe:cafe customer seating": [
+    79,
+    23
+  ],
+  "the Ville:Giorgio Rossi's apartment:main room:desk": [
+    87,
+    21
+  ],
+  "the Ville:Giorgio Rossi's apartment:main room:kitchen sink": [
+    89,
+    21
+  ],
+  "the Ville:Carlos Gomez's apartment:main room:desk": [
+    94,
+    21
+  ],
+  "the Ville:Carlos Gomez's apartment:main room:kitchen sink": [
+    96,
+    21
+  ],
+  "the Ville:Oak Hill College:classroom:classroom student seating": [
+    115,
+    23
+  ],
+  "the Ville:artist's co-living space:Rajiv Patel's room:easel": [
+    25,
+    22
+  ],
+  "the Ville:artist's co-living space:Abigail Chen's room:desk": [
+    36,
+    22
+  ],
+  "the Ville:Ryan Park's apartment:main room:kitchen sink": [
+    68,
+    22
+  ],
+  "the Ville:Oak Hill College:library:library table": [
+    122,
+    22
+  ],
+  "the Ville:The Rose and Crown Pub:pub:bar customer seating": [
+    55,
+    23
+  ],
+  "the Ville:Giorgio Rossi's apartment:main room:closet": [
+    90,
+    23
+  ],
+  "the Ville:Carlos Gomez's apartment:main room:closet": [
+    96,
+    24
+  ],
+  "the Ville:Oak Hill College:classroom:classroom podium": [
+    108,
+    23
+  ],
+  "the Ville:Ryan Park's apartment:main room:computer desk": [
+    66,
+    24
+  ],
+  "the Ville:Ryan Park's apartment:main room:closet": [
+    68,
+    26
+  ],
+  "the Ville:Giorgio Rossi's apartment:main room:blackboard": [
+    87,
+    24
+  ],
+  "the Ville:artist's co-living space:kitchen": [
+    42,
+    26
+  ],
+  "the Ville:artist's co-living space:kitchen:refrigerator": [
+    35,
+    25
+  ],
+  "the Ville:artist's co-living space:kitchen:toaster": [
+    40,
+    25
+  ],
+  "the Ville:artist's co-living space:kitchen:kitchen sink": [
+    41,
+    25
+  ],
+  "the Ville:The Rose and Crown Pub:pub:shelf": [
+    54,
+    25
+  ],
+  "the Ville:The Rose and Crown Pub:pub:microphone": [
+    61,
+    25
+  ],
+  "the Ville:artist's co-living space:common room": [
+    35,
+    30
+  ],
+  "the Ville:artist's co-living space:kitchen:cooking area": [
+    41,
+    26
+  ],
+  "the Ville:Hobbs Cafe:cafe:piano": [
+    83,
+    26
+  ],
+  "the Ville:artist's co-living space:Francisco Lopez's room": [
+    15,
+    30
+  ],
+  "the Ville:artist's co-living space:Francisco Lopez's bathroom": [
+    22,
+    31
+  ],
+  "the Ville:artist's co-living space:Hailey Johnson's room": [
+    25,
+    29
+  ],
+  "the Ville:artist's co-living space:Hailey Johnson's bathroom": [
+    32,
+    31
+  ],
+  "the Ville:artist's co-living space:Francisco Lopez's room:shelf": [
+    15,
+    28
+  ],
+  "the Ville:artist's co-living space:Francisco Lopez's bathroom:toilet": [
+    22,
+    28
+  ],
+  "the Ville:artist's co-living space:Hailey Johnson's room:easel": [
+    26,
+    28
+  ],
+  "the Ville:artist's co-living space:Hailey Johnson's bathroom:toilet": [
+    32,
+    28
+  ],
+  "the Ville:artist's co-living space:common room:common room table": [
+    36,
+    28
+  ],
+  "the Ville:artist's co-living space:Francisco Lopez's room:closet": [
+    17,
+    29
+  ],
+  "the Ville:artist's co-living space:Francisco Lopez's bathroom:bathroom sink": [
+    21,
+    30
+  ],
+  "the Ville:artist's co-living space:Hailey Johnson's room:closet": [
+    25,
+    29
+  ],
+  "the Ville:artist's co-living space:Hailey Johnson's bathroom:bathroom sink": [
+    31,
+    29
+  ],
+  "the Ville:artist's co-living space:Hailey Johnson's room:desk": [
+    26,
+    30
+  ],
+  "the Ville:artist's co-living space:common room:common room sofa": [
+    35,
+    30
+  ],
+  "the Ville:Oak Hill College:hallway": [
+    122,
+    31
+  ],
+  "the Ville:artist's co-living space:Francisco Lopez's room:easel": [
+    17,
+    31
+  ],
+  "the Ville:Dorm for Oak Hill College": [
+    121,
+    39
+  ],
+  "the Ville:Dorm for Oak Hill College:garden": [
+    118,
+    40
+  ],
+  "the Ville:Dorm for Oak Hill College:garden:dorm garden": [
+    131,
+    34
+  ],
+  "the Ville:artist's co-living space:Francisco Lopez's room:bed": [
+    16,
+    32
+  ],
+  "the Ville:artist's co-living space:Francisco Lopez's bathroom:shower": [
+    21,
+    32
+  ],
+  "the Ville:artist's co-living space:Hailey Johnson's room:bed": [
+    26,
+    32
+  ],
+  "the Ville:artist's co-living space:Hailey Johnson's bathroom:shower": [
+    30,
+    32
+  ],
+  "the Ville:Johnson Park": [
+    27,
+    50
+  ],
+  "the Ville:Johnson Park:park": [
+    27,
+    50
+  ],
+  "the Ville:Johnson Park:park:park garden": [
+    27,
+    50
+  ],
+  "the Ville:Harvey Oak Supply Store": [
+    60,
+    53
+  ],
+  "the Ville:Harvey Oak Supply Store:supply store": [
+    60,
+    53
+  ],
+  "the Ville:The Willows Market and Pharmacy": [
+    75,
+    42
+  ],
+  "the Ville:The Willows Market and Pharmacy:store": [
+    75,
+    42
+  ],
+  "the Ville:Harvey Oak Supply Store:supply store:supply store product shelf": [
+    61,
+    52
+  ],
+  "the Ville:Harvey Oak Supply Store:supply store:behind the supply store counter": [
+    69,
+    44
+  ],
+  "the Ville:The Willows Market and Pharmacy:store:behind the grocery counter": [
+    88,
+    44
+  ],
+  "the Ville:Dorm for Oak Hill College:Klaus Mueller's room": [
+    126,
+    47
+  ],
+  "the Ville:The Willows Market and Pharmacy:store:pharmacy store shelf": [
+    76,
+    47
+  ],
+  "the Ville:Dorm for Oak Hill College:kitchen": [
+    123,
+    46
+  ],
+  "the Ville:Dorm for Oak Hill College:kitchen:toaster": [
+    120,
+    45
+  ],
+  "the Ville:Dorm for Oak Hill College:kitchen:kitchen sink": [
+    121,
+    45
+  ],
+  "the Ville:Dorm for Oak Hill College:kitchen:refrigerator": [
+    123,
+    45
+  ],
+  "the Ville:Dorm for Oak Hill College:Klaus Mueller's room:closet": [
+    132,
+    45
+  ],
+  "the Ville:Harvey Oak Supply Store:supply store:supply store counter": [
+    68,
+    46
+  ],
+  "the Ville:The Willows Market and Pharmacy:store:grocery store counter": [
+    90,
+    46
+  ],
+  "the Ville:Dorm for Oak Hill College:common room": [
+    116,
+    49
+  ],
+  "the Ville:Dorm for Oak Hill College:kitchen:cooking area": [
+    123,
+    46
+  ],
+  "the Ville:Dorm for Oak Hill College:Klaus Mueller's room:bed": [
+    126,
+    46
+  ],
+  "the Ville:Dorm for Oak Hill College:Klaus Mueller's room:game console": [
+    128,
+    46
+  ],
+  "the Ville:Dorm for Oak Hill College:Klaus Mueller's room:desk": [
+    131,
+    46
+  ],
+  "the Ville:Dorm for Oak Hill College:common room:common room table": [
+    122,
+    49
+  ],
+  "the Ville:The Willows Market and Pharmacy:store:grocery store shelf": [
+    92,
+    52
+  ],
+  "the Ville:Dorm for Oak Hill College:man's bathroom": [
+    108,
+    51
+  ],
+  "the Ville:Dorm for Oak Hill College:man's bathroom:shower": [
+    107,
+    50
+  ],
+  "the Ville:Dorm for Oak Hill College:man's bathroom:bathroom sink": [
+    110,
+    50
+  ],
+  "the Ville:Dorm for Oak Hill College:man's bathroom:toilet": [
+    111,
+    50
+  ],
+  "the Ville:Dorm for Oak Hill College:common room:common room sofa": [
+    114,
+    50
+  ],
+  "the Ville:The Willows Market and Pharmacy:store:behind the pharmacy counter": [
+    75,
+    51
+  ],
+  "the Ville:The Willows Market and Pharmacy:store:pharmacy store counter": [
+    78,
+    53
+  ],
+  "the Ville:Dorm for Oak Hill College:common room:pool table": [
+    117,
+    52
+  ],
+  "the Ville:Dorm for Oak Hill College:woman's bathroom": [
+    130,
+    54
+  ],
+  "the Ville:Dorm for Oak Hill College:Maria Lopez's room": [
+    127,
+    55
+  ],
+  "the Ville:Dorm for Oak Hill College:woman's bathroom:toilet": [
+    130,
+    53
+  ],
+  "the Ville:Dorm for Oak Hill College:woman's bathroom:bathroom sink": [
+    131,
+    53
+  ],
+  "the Ville:Dorm for Oak Hill College:Maria Lopez's room:closet": [
+    122,
+    54
+  ],
+  "the Ville:Dorm for Oak Hill College:Maria Lopez's room:computer": [
+    127,
+    54
+  ],
+  "the Ville:Dorm for Oak Hill College:Maria Lopez's room:desk": [
+    123,
+    55
+  ],
+  "the Ville:Dorm for Oak Hill College:Wolfgang Schulz's room": [
+    109,
+    62
+  ],
+  "the Ville:Dorm for Oak Hill College:Ayesha Khan's room": [
+    116,
+    58
+  ],
+  "the Ville:Dorm for Oak Hill College:Maria Lopez's room:blackboard": [
+    127,
+    56
+  ],
+  "the Ville:Dorm for Oak Hill College:Wolfgang Schulz's room:desk": [
+    107,
+    57
+  ],
+  "the Ville:Dorm for Oak Hill College:Ayesha Khan's room:shelf": [
+    115,
+    57
+  ],
+  "the Ville:Dorm for Oak Hill College:Ayesha Khan's room:desk": [
+    118,
+    57
+  ],
+  "the Ville:Dorm for Oak Hill College:Maria Lopez's room:bed": [
+    123,
+    57
+  ],
+  "the Ville:Dorm for Oak Hill College:woman's bathroom:shower": [
+    131,
+    57
+  ],
+  "the Ville:Adam Smith's house": [
+    23,
+    68
+  ],
+  "the Ville:Adam Smith's house:main room": [
+    22,
+    63
+  ],
+  "the Ville:Yuriko Yamamoto's house": [
+    27,
+    59
+  ],
+  "the Ville:Yuriko Yamamoto's house:main room": [
+    28,
+    61
+  ],
+  "the Ville:Moore family's house": [
+    36,
+    62
+  ],
+  "the Ville:Moore family's house:main room": [
+    37,
+    61
+  ],
+  "the Ville:Dorm for Oak Hill College:Wolfgang Schulz's room:lifting weight": [
+    111,
+    58
+  ],
+  "the Ville:Adam Smith's house:main room:closet": [
+    20,
+    60
+  ],
+  "the Ville:Yuriko Yamamoto's house:main room:desk": [
+    31,
+    59
+  ],
+  "the Ville:Yuriko Yamamoto's house:main room:closet": [
+    29,
+    60
+  ],
+  "the Ville:Moore family's house:main room:closet": [
+    37,
+    60
+  ],
+  "the Ville:Moore family's house:main room:common room sofa": [
+    40,
+    60
+  ],
+  "the Ville:Dorm for Oak Hill College:Wolfgang Schulz's room:closet": [
+    111,
+    60
+  ],
+  "the Ville:Dorm for Oak Hill College:Ayesha Khan's room:closet": [
+    115,
+    61
+  ],
+  "the Ville:Adam Smith's house:main room:cooking area": [
+    23,
+    61
+  ],
+  "the Ville:Yuriko Yamamoto's house:main room:cooking area": [
+    31,
+    61
+  ],
+  "the Ville:Moore family's house:main room:desk": [
+    37,
+    61
+  ],
+  "the Ville:Moore family's house:main room:cooking area": [
+    39,
+    61
+  ],
+  "the Ville:Dorm for Oak Hill College:Wolfgang Schulz's room:game console": [
+    110,
+    61
+  ],
+  "the Ville:Dorm for Oak Hill College:Ayesha Khan's room:bed": [
+    118,
+    61
+  ],
+  "the Ville:Adam Smith's house:main room:desk": [
+    21,
+    62
+  ],
+  "the Ville:Adam Smith's house:main room:kitchen sink": [
+    23,
+    62
+  ],
+  "the Ville:Yuriko Yamamoto's house:main room:shelf": [
+    29,
+    62
+  ],
+  "the Ville:Yuriko Yamamoto's house:main room:kitchen sink": [
+    31,
+    62
+  ],
+  "the Ville:Moore family's house:main room:kitchen sink": [
+    39,
+    62
+  ],
+  "the Ville:Dorm for Oak Hill College:Wolfgang Schulz's room:bed": [
+    107,
+    62
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house": [
+    62,
+    72
+  ],
+  "the Ville:Moreno family's house": [
+    81,
+    76
+  ],
+  "the Ville:Lin family's house": [
+    95,
+    75
+  ],
+  "the Ville:Adam Smith's house:main room:bed": [
+    21,
+    65
+  ],
+  "the Ville:Adam Smith's house:main room:refrigerator": [
+    23,
+    65
+  ],
+  "the Ville:Yuriko Yamamoto's house:main room:bed": [
+    29,
+    65
+  ],
+  "the Ville:Yuriko Yamamoto's house:main room:refrigerator": [
+    31,
+    65
+  ],
+  "the Ville:Moore family's house:main room:bed": [
+    37,
+    65
+  ],
+  "the Ville:Moore family's house:main room:refrigerator": [
+    39,
+    65
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:common room": [
+    56,
+    65
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:common room:shelf": [
+    51,
+    65
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:kitchen": [
+    57,
+    69
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:kitchen:kitchen sink": [
+    57,
+    65
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:bathroom": [
+    62,
+    65
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:bathroom:toilet": [
+    60,
+    65
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:bathroom:bathroom sink": [
+    62,
+    65
+  ],
+  "the Ville:Moreno family's house:common room": [
+    69,
+    65
+  ],
+  "the Ville:Moreno family's house:common room:shelf": [
+    70,
+    65
+  ],
+  "the Ville:Moreno family's house:kitchen": [
+    75,
+    65
+  ],
+  "the Ville:Moreno family's house:kitchen:kitchen sink": [
+    75,
+    65
+  ],
+  "the Ville:Moreno family's house:bathroom": [
+    78,
+    65
+  ],
+  "the Ville:Moreno family's house:bathroom:toilet": [
+    78,
+    65
+  ],
+  "the Ville:Moreno family's house:bathroom:bathroom sink": [
+    79,
+    65
+  ],
+  "the Ville:Lin family's house:common room": [
+    87,
+    68
+  ],
+  "the Ville:Lin family's house:common room:shelf": [
+    89,
+    65
+  ],
+  "the Ville:Lin family's house:kitchen": [
+    93,
+    69
+  ],
+  "the Ville:Lin family's house:kitchen:kitchen sink": [
+    93,
+    65
+  ],
+  "the Ville:Lin family's house:bathroom": [
+    97,
+    66
+  ],
+  "the Ville:Lin family's house:bathroom:toilet": [
+    96,
+    65
+  ],
+  "the Ville:Lin family's house:bathroom:bathroom sink": [
+    97,
+    65
+  ],
+  "the Ville:Adam Smith's house:bathroom": [
+    23,
+    68
+  ],
+  "the Ville:Yuriko Yamamoto's house:bathroom": [
+    31,
+    69
+  ],
+  "the Ville:Moore family's house:bathroom": [
+    36,
+    68
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:kitchen:cooking area": [
+    57,
+    66
+  ],
+  "the Ville:Moreno family's house:common room:harp": [
+    71,
+    66
+  ],
+  "the Ville:Moreno family's house:kitchen:cooking area": [
+    75,
+    66
+  ],
+  "the Ville:Lin family's house:kitchen:cooking area": [
+    93,
+    66
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:common room:common room table": [
+    52,
+    69
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:bathroom:shower": [
+    61,
+    67
+  ],
+  "the Ville:Moreno family's house:common room:common room table": [
+    73,
+    69
+  ],
+  "the Ville:Moreno family's house:bathroom:shower": [
+    78,
+    67
+  ],
+  "the Ville:Lin family's house:common room:common room table": [
+    88,
+    67
+  ],
+  "the Ville:Lin family's house:bathroom:shower": [
+    96,
+    67
+  ],
+  "the Ville:Adam Smith's house:bathroom:bathroom sink": [
+    20,
+    68
+  ],
+  "the Ville:Adam Smith's house:bathroom:toilet": [
+    24,
+    68
+  ],
+  "the Ville:Yuriko Yamamoto's house:bathroom:bathroom sink": [
+    28,
+    68
+  ],
+  "the Ville:Yuriko Yamamoto's house:bathroom:toilet": [
+    32,
+    68
+  ],
+  "the Ville:Moore family's house:bathroom:bathroom sink": [
+    36,
+    68
+  ],
+  "the Ville:Moore family's house:bathroom:toilet": [
+    40,
+    68
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:kitchen:refrigerator": [
+    57,
+    68
+  ],
+  "the Ville:Moreno family's house:kitchen:refrigerator": [
+    75,
+    68
+  ],
+  "the Ville:Lin family's house:kitchen:refrigerator": [
+    93,
+    68
+  ],
+  "the Ville:Adam Smith's house:bathroom:shower": [
+    21,
+    70
+  ],
+  "the Ville:Yuriko Yamamoto's house:bathroom:shower": [
+    29,
+    70
+  ],
+  "the Ville:Moore family's house:bathroom:shower": [
+    36,
+    70
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:Tamara Taylor's room": [
+    52,
+    75
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:Tamara Taylor's room:closet": [
+    51,
+    73
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:Carmen Ortiz's room": [
+    62,
+    75
+  ],
+  "the Ville:Moreno family's house:Tom and Jane Moreno's bedroom": [
+    73,
+    75
+  ],
+  "the Ville:Moreno family's house:Tom and Jane Moreno's bedroom:closet": [
+    69,
+    73
+  ],
+  "the Ville:Moreno family's house:empty bedroom": [
+    77,
+    73
+  ],
+  "the Ville:Lin family's house:Mei and John Lin's bedroom": [
+    90,
+    75
+  ],
+  "the Ville:Lin family's house:Mei and John Lin's bedroom:closet": [
+    88,
+    75
+  ],
+  "the Ville:Lin family's house:Eddy Lin's bedroom": [
+    95,
+    75
+  ],
+  "the Ville:Lin family's house:Eddy Lin's bedroom:closet": [
+    98,
+    75
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:Tamara Taylor's room:desk": [
+    53,
+    74
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:Tamara Taylor's room:bed": [
+    55,
+    74
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:Carmen Ortiz's room:bed": [
+    58,
+    74
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:Carmen Ortiz's room:closet": [
+    61,
+    74
+  ],
+  "the Ville:Moreno family's house:Tom and Jane Moreno's bedroom:desk": [
+    71,
+    74
+  ],
+  "the Ville:Moreno family's house:Tom and Jane Moreno's bedroom:bed": [
+    72,
+    74
+  ],
+  "the Ville:Moreno family's house:empty bedroom:bed": [
+    75,
+    74
+  ],
+  "the Ville:Moreno family's house:empty bedroom:closet": [
+    79,
+    74
+  ],
+  "the Ville:Lin family's house:Mei and John Lin's bedroom:desk": [
+    89,
+    74
+  ],
+  "the Ville:Lin family's house:Mei and John Lin's bedroom:bed": [
+    90,
+    74
+  ],
+  "the Ville:Lin family's house:Eddy Lin's bedroom:bed": [
+    93,
+    74
+  ],
+  "the Ville:Lin family's house:Eddy Lin's bedroom:desk": [
+    95,
+    74
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:Carmen Ortiz's room:guitar": [
+    62,
+    75
+  ],
+  "the Ville:Moreno family's house:empty bedroom:guitar": [
+    80,
+    75
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:garden": [
+    54,
+    80
+  ],
+  "the Ville:Tamara Taylor and Carmen Ortiz's house:garden:house garden": [
+    54,
+    80
+  ],
+  "the Ville:Moreno family's house:garden": [
+    72,
+    79
+  ],
+  "the Ville:Moreno family's house:garden:house garden": [
+    73,
+    78
+  ],
+  "the Ville:Lin family's house:garden": [
+    95,
+    78
+  ],
+  "the Ville:Lin family's house:garden:house garden": [
+    95,
+    78
+  ],
+  "the Ville:Moreno family's house:garden:garden chair": [
+    72,
+    79
+  ]
+}

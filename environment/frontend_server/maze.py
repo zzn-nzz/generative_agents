@@ -194,6 +194,7 @@ class Maze:
           add += f'{self.tiles[i][j]["arena"]}:'
           add += f'{self.tiles[i][j]["game_object"]}'
           addresses += [add]
+
         if self.tiles[i][j]["spawning_location"]: 
           add = f'<spawn_loc>{self.tiles[i][j]["spawning_location"]}'
           addresses += [add]
@@ -203,6 +204,12 @@ class Maze:
             self.address_tiles[add].add((j, i))
           else: 
             self.address_tiles[add] = set([(j, i)])
+    # all_addresses = {}
+    # for add in list(self.address_tiles.keys()):
+    #   for k in self.address_tiles[add]:
+    #     all_addresses[add] = k
+    #     break
+    # json.dump(all_addresses, open('all_addresses.json', 'w'), indent=2)
 
 
   def turn_coordinate_to_tile(self, px_coordinate): 
