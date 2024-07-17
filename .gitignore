@@ -5,7 +5,6 @@ static_dirs/*
 
 environment/frontend_server/compressed_storage/
 environment/frontend_server/saved_images/
-environment/frontend_server/utils.py
 !storage/base_the_ville_isabella_maria_klaus/*
 !storage/base_the_ville_n25/*
 

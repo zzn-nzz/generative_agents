@@ -19,8 +19,14 @@ move_data = json.load(open(move_path))
 
 real_name_list = {
     'Klaus Mueller': "Tom",
-    'Isabella Rodriguez': "Isabel",
+    'Isabella Rodriguez': "Jen",
     'Maria Lopez': "Mar"
+}
+
+to_official_name = {
+    "Tom": 'Klaus Mueller',
+    "Jen": "Isabella Rodriguez",
+    "Mar": "Maria Lopez"
 }
 
 def conv_coor(pos):
@@ -28,6 +34,13 @@ def conv_coor(pos):
     for coor in add_tiles[pos]:
         return coor
     print(f"No place called {pos}")
+
+def clear_file_all():
+    for time in move_data:
+        for persona in list(move_data[time].keys()):
+            move_data[time].pop(persona)
+    with open(move_path, 'w') as file:
+        json.dump(move_data, file, indent=2)
 
 def move_file(persona, time, pos, pronunciatio="🚶", real_name=None):
     if persona in real_name_list:
@@ -68,7 +81,7 @@ def move(persona, start_pos, end_pos, start_time, real_name=None):
     n = len(path)
     for i in range(n):
         now = start_time + i
-        move_file(persona, now, path[i], real_name)
+        move_file(persona, now, path[i])
     
 def stop_move(persona, start_time, end_time):
     for i in range(end_time - start_time):
@@ -96,11 +109,21 @@ def set_pos(persona, pos, time=0, pronunciatio='🧘‍♂️', real_name=None):
       "description": "sleeping @ the Ville:Dorm for Oak Hill College:Klaus Mueller's room:bed",
       "chat": None
     }
+    with open(move_path, 'w') as file:
+        json.dump(move_data, file, indent=2)
 # 'Isabella Rodriguez'
 # 'Klaus Mueller'
 # 'Maria Lopez'
-set_pos('Isabella Rodriguez', "the Ville:Isabella Rodriguez's apartment:main room:bed", 0)
-set_pos('Klaus Mueller', "the Ville:Giorgio Rossi's apartment", 0)
-set_pos('Maria Lopez', "the Ville:Arthur Burton's apartment:main room:guitar", 0)
-stop_move('Klaus Mueller', 0, 200)
-move('Klaus Mueller', "the Ville:Giorgio Rossi's apartment", "the Ville:Arthur Burton's apartment:main room:guitar", 0)
+clear_file_all()
+
+init_pos = {
+    "Tom": "the Ville:artist's co-living space:Latoya Williams's room:bed",
+    "Mar": "the Ville:artist's co-living space:Rajiv Patel's room:guitar",
+    "Jen": "the Ville:artist's co-living space:Abigail Chen's room:closet"
+}
+
+set_pos(to_official_name["Tom"], init_pos["Tom"], 0, '🙂😏')
+set_pos(to_official_name["Mar"], init_pos["Mar"], 0, '🎵🤘🏻')
+set_pos(to_official_name["Jen"], init_pos["Jen"], 0, '🧘🏻🔇')
+#stop_move('Klaus Mueller', 0, 200)
+move(to_official_name["Tom"], init_pos["Tom"], init_pos["Jen"], 0)

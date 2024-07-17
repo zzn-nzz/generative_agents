@@ -433,7 +433,7 @@
 	        initials = (
 	          (initials.shift()?.[1] || '') + (initials.pop()?.[1] || '')
 	        ).toUpperCase();
-	        pronunciatios[curr_persona_name].setText(real_name + ": " + pronunciatio_content);
+	        pronunciatios[curr_persona_name].setText(real_name + ":" + pronunciatio_content);
 
 	        // Updating the status of each personas 
 	        document.getElementById("quick_emoji-"+curr_persona_name).innerHTML = pronunciatio_content;
