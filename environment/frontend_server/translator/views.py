@@ -56,7 +56,8 @@ def demo(request, sim_code, step, play_speed="2"):
   for p in list(raw_all_movement["0"].keys()): 
     persona_names += [{"original": p, 
                        "underscore": p.replace(" ", "_"), 
-                       "initial": p[0] + p.split(" ")[-1][0]}]
+                       "initial": p[0] + p.split(" ")[-1][0],
+                       "real_name": raw_all_movement["0"][p]['real_name']}]
     persona_names_set.add(p)
 
   # <all_movement> is the main movement variable that we are passing to the 
