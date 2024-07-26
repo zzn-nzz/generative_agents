@@ -18,13 +18,13 @@
     "Belief_visual": "null",
     "Outcome_visual": "../environment/frontend_server/saved_images/Noisy Novel/outcome.jpg",
     "Emotion_visual": "../environment/frontend_server/saved_images/Noisy Novel/",
-    "Action_visual": "null",
+    "Action_visual": "../environment/frontend_server/saved_videos/Noisy Novel/action.mp4",
     "Emotional Expression_visual": "../environment/frontend_server/saved_images/Noisy Novel/expression.jpg",
     "Opposing Desire_visual": "null",
     "Opposing Belief_visual": "null",
-    "Opposing Outcome_visual": "../environment/frontend_server/saved_images/Noisy Novel/opposing_outcome.jpg",
+    "Opposing Outcome_visual": ["../environment/frontend_server/saved_images/Noisy Novel/opposing_outcome.jpg"],
     "Opposing Emotion_visual": "null",
-    "Opposing Action_visual": "null",
-    "Opposing Expression_visual": "../environment/frontend_server/saved_images/Noisy Novel/opposing_expression.jpg"
+    "Opposing Action_visual": ["../environment/frontend_server/saved_videos/Noisy Novel/opposing_action1.mp4", "../environment/frontend_server/saved_videos/Noisy Novel/opposing_action2.mp4"],
+    "Opposing Expression_visual": ["../environment/frontend_server/saved_images/Noisy Novel/opposing_expression.jpg"]
   }
 ]
