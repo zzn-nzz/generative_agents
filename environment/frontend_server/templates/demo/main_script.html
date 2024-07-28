@@ -442,25 +442,6 @@
                 speech_bubbles[curr_persona_name].setAlpha(0);
                 // pronunciatios[curr_persona_name].setVisible(false);
             }
-            for (let j=i+1; j<Object.keys(personas).length; j++) {
-                let next_persona_name = Object.keys(personas)[j];
-                let next_persona = personas[next_persona_name];
-                if (Math.abs(next_persona.body.y - curr_persona.body.y) < 58) {
-                    if (Math.abs(next_persona.body.x - curr_persona.body.x) < 130) {
-                        if (next_persona.body.x <= curr_persona.body.x) {
-                            speech_bubbles[next_persona_name].setOrigin(-0.5, 0.5);
-                            speech_bubbles[next_persona_name].setScale(-1.37, 1.045);
-                            // speech_bubbles[next_persona_name].setX(speech_bubbles[next_persona_name].x - 160);
-                        } else {
-                            is_change_now=false;
-                            speech_bubbles[curr_persona_name].setOrigin(-0.5, 0.5);
-                            speech_bubbles[curr_persona_name].setScale(-1.37, 1.045);
-                            pronunciatios[curr_persona_name].setPosition(pronunciatios[curr_persona_name].x - 160, pronunciatios[curr_persona_name].y);
-                            // speech_bubbles[curr_persona_name].setX(speech_bubbles[curr_persona_name].x - 160);
-                        }
-                    }
-                }
-            }
 	        // // Updating the status of each personas 
 	        document.getElementById("quick_emoji-"+curr_persona_name).innerHTML = pronunciatio_content;
 	        document.getElementById("current_action__"+curr_persona_name).innerHTML = description_content.split("@")[0];
@@ -498,7 +479,27 @@
             }
 	        curr_speech_bubble.x = curr_persona.body.x + 80; 
           curr_speech_bubble.y = curr_persona.body.y - 39;
-
+          for (let j=i+1; j<Object.keys(personas).length; j++) {
+                let next_persona_name = Object.keys(personas)[j];
+                let next_persona = personas[next_persona_name];
+                if (Math.abs(next_persona.body.y - curr_persona.body.y) < 58) {
+                    if (Math.abs(next_persona.body.x - curr_persona.body.x) < 130) {
+                        if (next_persona.body.x <= curr_persona.body.x) {
+                            speech_bubbles[next_persona_name].setOrigin(-0.5, 0.5);
+                            speech_bubbles[next_persona_name].setScale(-1.37, 1.045);
+                            pronunciatios[next_persona_name].setPosition(pronunciatios[next_persona_name].x - 120, pronunciatios[next_persona_name].y);
+                            
+                            // speech_bubbles[next_persona_name].setX(speech_bubbles[next_persona_name].x - 160);
+                        } else {
+                            is_change_now=false;
+                            speech_bubbles[curr_persona_name].setOrigin(-0.5, 0.5);
+                            speech_bubbles[curr_persona_name].setScale(-1.37, 1.045);
+                            pronunciatios[curr_persona_name].setPosition(pronunciatios[curr_persona_name].x - 120, pronunciatios[curr_persona_name].y);
+                            // speech_bubbles[curr_persona_name].setX(speech_bubbles[curr_persona_name].x - 160);
+                        }
+                    }
+                }
+            }
           let left_walk_name = curr_persona_name + "-left-walk";
 					let right_walk_name = curr_persona_name + "-right-walk";
 					let down_walk_name = curr_persona_name + "-down-walk";
