@@ -404,7 +404,8 @@
     	let curr_persona = personas[curr_persona_name];
     	let curr_pronunciatio = pronunciatios[Object.keys(personas)[i]];
     	let curr_speech_bubble = speech_bubbles[Object.keys(personas)[i]];
-
+        
+        let is_change_now=true;
     	if (curr_persona_name.replace("_", " ") in all_movement[step]) {
     		if (execute_count == execute_count_max) { 
     			let curr_x = all_movement[step][curr_persona_name.replace("_", " ")]["movement"][0]
@@ -433,9 +434,34 @@
 	        initials = (
 	          (initials.shift()?.[1] || '') + (initials.pop()?.[1] || '')
 	        ).toUpperCase();
-	        pronunciatios[curr_persona_name].setText(real_name + ":" + pronunciatio_content);
-
-	        // Updating the status of each personas 
+	        if (pronunciatio_content != "Hide") {
+                speech_bubbles[curr_persona_name].setAlpha(1);
+                pronunciatios[curr_persona_name].setText(real_name + ":" + pronunciatio_content);
+            } else {
+                pronunciatios[curr_persona_name].setText("");
+                speech_bubbles[curr_persona_name].setAlpha(0);
+                // pronunciatios[curr_persona_name].setVisible(false);
+            }
+            for (let j=i+1; j<Object.keys(personas).length; j++) {
+                let next_persona_name = Object.keys(personas)[j];
+                let next_persona = personas[next_persona_name];
+                if (Math.abs(next_persona.body.y - curr_persona.body.y) < 58) {
+                    if (Math.abs(next_persona.body.x - curr_persona.body.x) < 130) {
+                        if (next_persona.body.x <= curr_persona.body.x) {
+                            speech_bubbles[next_persona_name].setOrigin(-0.5, 0.5);
+                            speech_bubbles[next_persona_name].setScale(-1.37, 1.045);
+                            // speech_bubbles[next_persona_name].setX(speech_bubbles[next_persona_name].x - 160);
+                        } else {
+                            is_change_now=false;
+                            speech_bubbles[curr_persona_name].setOrigin(-0.5, 0.5);
+                            speech_bubbles[curr_persona_name].setScale(-1.37, 1.045);
+                            pronunciatios[curr_persona_name].setPosition(pronunciatios[curr_persona_name].x - 160, pronunciatios[curr_persona_name].y);
+                            // speech_bubbles[curr_persona_name].setX(speech_bubbles[curr_persona_name].x - 160);
+                        }
+                    }
+                }
+            }
+	        // // Updating the status of each personas 
 	        document.getElementById("quick_emoji-"+curr_persona_name).innerHTML = pronunciatio_content;
 	        document.getElementById("current_action__"+curr_persona_name).innerHTML = description_content.split("@")[0];
 	        document.getElementById("target_address__"+curr_persona_name).innerHTML = description_content.split("@")[1];
@@ -466,10 +492,11 @@
 	        } else {
 	        	anims_direction = "";
 	        }
-
-	        curr_pronunciatio.x = curr_persona.body.x + 18; 
-          curr_pronunciatio.y = curr_persona.body.y - 42 - 25; // DEBUG 1 --- I added 32 offset on Dec 29. 
-          curr_speech_bubble.x = curr_persona.body.x + 80; 
+            if(is_change_now==true) {
+                curr_pronunciatio.x = curr_persona.body.x + 18; 
+                curr_pronunciatio.y = curr_persona.body.y - 42 - 25; // DEBUG 1 --- I added 32 offset on Dec 29. 
+            }
+	        curr_speech_bubble.x = curr_persona.body.x + 80; 
           curr_speech_bubble.y = curr_persona.body.y - 39;
 
           let left_walk_name = curr_persona_name + "-left-walk";

@@ -8,7 +8,7 @@ col_maze = maze.collision_maze
 add_tiles = maze.address_tiles
 
 
-target_play_name = '1step'
+target_play_name = 'Noisy_Novel'
 
 play_path = f'compressed_storage/{target_play_name}'
 
@@ -42,7 +42,7 @@ def clear_file_all():
     with open(move_path, 'w') as file:
         json.dump(move_data, file, indent=2)
 
-def move_file(persona, time, pos, pronunciatio="🚶", real_name=None):
+def move_file(persona, time, pos, pronunciatio="Hi", real_name=None):
     if persona in real_name_list:
         real_name = real_name_list[persona]
     if isinstance(pos, str):
@@ -79,14 +79,30 @@ def move(persona, start_pos, end_pos, start_time, real_name=None):
     #print(path)
     #quit()
     n = len(path)
+    now = start_time
     for i in range(n):
-        now = start_time + i
         move_file(persona, now, path[i])
+        now += 1
+    return now
+
     
 def stop_move(persona, start_time, end_time):
     for i in range(end_time - start_time):
         now = start_time + i
         clear_file(persona, now)
+
+def adj_pos(pos, dir="left", stp=1):
+    if isinstance(pos, str):
+        pos = conv_coor(pos)
+    if dir == 'left':
+        return (pos[0] - stp, pos[1])
+    elif dir == 'right':
+        return (pos[0] + stp, pos[1])
+    elif dir == 'up':
+        return (pos[0], pos[1] - stp)
+    elif dir == 'down':
+        return (pos[0], pos[1] + stp)
+
 
 def set_pos(persona, pos, time=0, pronunciatio='🧘‍♂️', real_name=None):
     if persona in real_name_list:
@@ -122,8 +138,11 @@ init_pos = {
     "Jen": "the Ville:artist's co-living space:Abigail Chen's room:closet"
 }
 
-set_pos(to_official_name["Tom"], init_pos["Tom"], 0, '🙂😏')
+
+
+set_pos(to_official_name["Tom"], init_pos["Tom"], 0, '')
 set_pos(to_official_name["Mar"], init_pos["Mar"], 0, '🎵🤘🏻')
 set_pos(to_official_name["Jen"], init_pos["Jen"], 0, '🧘🏻🔇')
 #stop_move('Klaus Mueller', 0, 200)
-move(to_official_name["Tom"], init_pos["Tom"], init_pos["Jen"], 150)
+tstp = move(to_official_name["Tom"], init_pos["Tom"], adj_pos(init_pos["Jen"], stp=2), 20)
+tstp = move(to_official_name["Jen"], init_pos["Jen"], adj_pos(init_pos["Jen"]), tstp)
