@@ -17,18 +17,6 @@ meta_path = f'{play_path}/meta.json'
 
 move_data = json.load(open(move_path))
 
-real_name_list = {
-    'Klaus Mueller': "Tom",
-    'Isabella Rodriguez': "Jen",
-    'Maria Lopez': "Mar"
-}
-
-to_official_name = {
-    "Tom": 'Klaus Mueller',
-    "Jen": "Isabella Rodriguez",
-    "Mar": "Maria Lopez"
-}
-
 def conv_coor(pos):
     # convert position name to coordinates
     for coor in add_tiles[pos]:
@@ -42,7 +30,7 @@ def clear_file_all():
     with open(move_path, 'w') as file:
         json.dump(move_data, file, indent=2)
 
-def move_file(persona, time, pos, pronunciatio="Hi", real_name=None):
+def move_file(persona, time, pos, pronunciatio="Hide", real_name=None):
     if persona in real_name_list:
         real_name = real_name_list[persona]
     if isinstance(pos, str):
@@ -138,7 +126,17 @@ init_pos = {
     "Jen": "the Ville:artist's co-living space:Abigail Chen's room:closet"
 }
 
+real_name_list = {
+    'Klaus Mueller': "Tom",
+    'Isabella Rodriguez': "Jen",
+    'Maria Lopez': "Mar"
+}
 
+to_official_name = {
+    "Tom": 'Klaus Mueller',
+    "Jen": "Isabella Rodriguez",
+    "Mar": "Maria Lopez"
+}
 
 set_pos(to_official_name["Tom"], init_pos["Tom"], 0, '')
 set_pos(to_official_name["Mar"], init_pos["Mar"], 0, '🎵🤘🏻')
