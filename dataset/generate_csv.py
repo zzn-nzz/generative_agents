@@ -2,21 +2,21 @@ import json
 
 
 data = {}
-data['Name']='Noisy Novel'
-visual_path = f"../environment/frontend_server/saved_images/{data['Name']}"
-data['Context']='Tom is attempting to complete his novel today.'
-data['Desire']='Tom wants to finish his novel undisturbed.'
-data['Belief']='Tom believes that his neighbor will be considerate and quite.'
-data['Outcome']="Tom's neighbor constantly makes loud noise and distractions."
-data['Emotion']='Tom feels angry and overwhelmed.'
-data['Action']="Tom decides to knock on his neighbor's door and confronts his neighbor about the noise."
-data['Emotional Expression']='Angry Emoji'
-data['Opposing Desire']='Tom hopes he can complete his novel in a noisy environment because it will inspire him more.'
-data['Opposing Belief']='Tom believes that his neighbor will be loud and noisy.'
-data['Opposing Outcome']="Tom's neighbor is quiet and peaceful today."
-data['Opposing Emotion']='Tom feels happy and content.'
-data['Opposing Action']='Tom stays at home in peace.'
-data['Opposing Expression']='Happy, Satisfied Emoji'
+data['Name']='New_Barista'
+visual_path = f"../environment/frontend_server/saved_videos/{data['Name']}"
+data['Context']='Sarah ordered a cup of coffee from the new barista Amy at her regular cafe.'
+data['Desire']='Sarah wants her coffee ready as soon as possible, since she is in a hurry.'
+data['Belief']="Sarah believes that the new barista Amy can make the coffee quickly."
+data['Outcome']="Amy is still not very skilled at operating the coffee machine and hasn't been able to make the coffee properly."
+data['Emotion']='Sarah is a bit angry and very disappointed with the barista.'
+data['Action']="Sarah walked over to the barista and canceled her coffee order."
+data['Emotional Expression']='Angry and Disappointed Emoji'
+data['Opposing Desire']="Sarah doesn't mind when her coffee will be ready."
+data['Opposing Belief']="Sarah does not trust that the new barista can make good coffee."
+data['Opposing Outcome']="Amy quickly and perfectly made the coffee."
+data['Opposing Emotion']='Sarah was very relaxed and understanding of the barista.'
+data['Opposing Action']="Sarah stayed in place and waited patiently."
+data['Opposing Expression']='Chill and Relaxed Emoji'
 data['Desire_visual']='null'
 data['Belief_visual']='null'
 data['Outcome_visual']=f'{visual_path}/outcome.jpg'
