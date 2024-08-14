@@ -25,22 +25,22 @@
  	let step_size = {{sec_per_step}} * 1000; // 10 seconds = 10000
 
 	// Phaser 3.0 global settings. 
-	// Configuration meant to be passed to the main Phaser game instance. 
-	// const config = {
-	//   type: Phaser.AUTO,
-	//   width: 1500,
-	//   height: 800,
-	//   parent: "game-container",
-	//   pixelArt: true,
-	//   physics: {
-	//     default: "arcade",
-	//     arcade: {
-	//       gravity: { y: 0 } } },
-	//   scene: {
-	//     preload: preload,
-	//     create: create,
-	//     update: update },
-	//   scale: {zoom: 0.8} };
+	//Configuration meant to be passed to the main Phaser game instance. 
+	const config = {
+	  type: Phaser.AUTO,
+	  width: 1500,
+	  height: 800,
+	  parent: "game-container",
+	  pixelArt: true,
+	  physics: {
+	    default: "arcade",
+	    arcade: {
+	      gravity: { y: 0 } } },
+	  scene: {
+	    preload: preload,
+	    create: create,
+	    update: update },
+	  scale: {zoom: 0.8} };
 
 	// const config = {
 	//   type: Phaser.AUTO,
@@ -58,25 +58,25 @@
 	//     update: update },
 	//   scale: {zoom: 1} };
 
-	const config = {
-  type: Phaser.AUTO,
-  width: 4480,
-  height: 3200,
-  parent: "game-container",
-  pixelArt: true,
-  physics: {
-    default: "arcade",
-    arcade: {
-      gravity: { y: 0 }
-    }
-  },
-  scene: {
-    preload: preload,
-    create: create,
-    update: update
-  },
-  scale: { zoom: 0.10 } 
-};
+// 	const config = {
+//   type: Phaser.AUTO,
+//   width: 4480,
+//   height: 3200,
+//   parent: "game-container",
+//   pixelArt: true,
+//   physics: {
+//     default: "arcade",
+//     arcade: {
+//       gravity: { y: 0 }
+//     }
+//   },
+//   scene: {
+//     preload: preload,
+//     create: create,
+//     update: update
+//   },
+//   scale: { zoom: 0.10 } 
+// };
 
 
 
@@ -85,6 +85,12 @@
 	const game = new Phaser.Game(config);
 	let cursors;
 	let player;
+
+	let chat_messages = [
+    { time: 0, persona: "Abi", chat: "hi" },
+    { time: 20, persona: "Abi", chat: "i WANT TO GO here" },
+    { time: 40, persona: "Tom", chat: "im tom" }
+];
 
 	// Persona related variables. This should have the name of the persona as its 
 	// keys, and the instances of the Persona class as the values.
@@ -97,6 +103,8 @@
 	var personas = {};
 	var pronunciatios = {};
 	var speech_bubbles = {};
+	var chats = {}; 
+	var chat_boxes = {}
 	let anims_direction;
 	let pre_anims_direction;
 	let pre_anims_direction_dict = {};
@@ -187,6 +195,7 @@
 	  {% endfor %}
 
 	  this.load.image('speech_bubble', "{% static 'assets/speech_bubble/v3.png' %}");
+		this.load.image('chat_box', "{% static 'assets/speech_bubble/v3.png' %}"); 
 	}
 
 	function create() {  
@@ -302,8 +311,7 @@
 	    																						  'speech_bubble').setDepth(3);
       speech_bubbles[persona_name].displayWidth = 130;
       speech_bubbles[persona_name].displayHeight = 58;
-
-	    pronunciatios[persona_name] = this.add.text(
+			pronunciatios[persona_name] = this.add.text(
 	                                   new_sprite.body.x - 6, 
 	                                   new_sprite.body.y - 42, 
 	                                   "🦁", {
@@ -312,6 +320,24 @@
 	                                   padding: { x: 8, y: 8}, 
 	                                   border:"solid",
 	                                   borderRadius:"10px"}).setDepth(3);
+
+			// Creating the chatbox 
+			chat_boxes[persona_name] = this.add.image(new_sprite.body.x - 30, 
+	    																						  new_sprite.body.y - 30,
+	    																						  'chat_box').setDepth(3);
+			chat_boxes[persona_name].displayWidth = 400;
+      chat_boxes[persona_name].displayHeight = 100;
+			chats[persona_name] = this.add.text(
+																		chat_boxes[persona_name].x - 200,  
+    																chat_boxes[persona_name].y - chat_boxes[persona_name].displayHeight / 2 + 10,
+	                                   "", {
+	                                   font: "24px monospace", 
+	                                   fill: "#000000", 
+	                                   padding: { x: 8, y: 8}, 
+	                                   border:"solid",
+	                                   borderRadius:"10px"}).setDepth(3);
+
+	    
 	  }
 
 	  // Create the player's walking animations from the texture atlas. These are
@@ -353,6 +379,50 @@
 
 
 	function update(time, delta) {
+		var latest_message = null;
+		var latest_person = null; 
+		for (let i=0; i<Object.keys(personas).length; i++) {
+			let curr_persona_name = Object.keys(personas)[i];
+			let curr_val = all_movement[step][curr_persona_name.replace("_", " ")]; 
+			if (curr_val && all_movement[step][curr_persona_name.replace("_", " ")]["chat"]  != "") {
+				latest_message = all_movement[step][curr_persona_name.replace("_", " ")]["chat"] 
+				latest_person = all_movement[step][curr_persona_name.replace("_", " ")]["real_name"] 
+				console.log(latest_person, latest_message)
+			}
+			
+		}
+	
+
+		if (latest_message) {
+				for (let persona_name in chat_boxes) {
+
+						// Dynamically move the position of the chatbox
+						let leftMostX = this.cameras.main.scrollX;
+						let topMostY = this.cameras.main.scrollY;
+		
+						let curr_chat_box = chat_boxes[persona_name];
+						let curr_chat = chats[persona_name];
+
+						curr_chat_box.x = leftMostX + 350;
+						curr_chat_box.y = topMostY + 700;
+						curr_chat.x = curr_chat_box.x - 180;
+						curr_chat.y = curr_chat_box.y - 20;
+
+						curr_chat.setText( latest_person + " : " + latest_message);
+				}
+		}
+
+		// for (let persona_name in chat_boxes) {
+    //     let curr_chat_box = chat_boxes[persona_name];
+		// 		let curr_chat = chats[persona_name]
+		// 		console.log("current chat", curr_chat.text)
+    //     curr_chat_box.x = leftMostX + 400; 
+    //     curr_chat_box.y = topMostY + 100; 
+
+		// 		curr_chat.x = curr_chat_box.x - 180; 
+    //     curr_chat.y = curr_chat_box.y - 20;
+    // }
+
 		// *** SETUP PLAY AND PAUSE BUTTON *** 
 		let play_context = this;
 		function game_resume() {  
@@ -403,16 +473,20 @@
 	 		let curr_persona_name = Object.keys(personas)[i];
     	let curr_persona = personas[curr_persona_name];
     	let curr_pronunciatio = pronunciatios[Object.keys(personas)[i]];
+			let curr_chat = chats[Object.keys(personas)[i]];
     	let curr_speech_bubble = speech_bubbles[Object.keys(personas)[i]];
+			let curr_chat_box = chat_boxes[Object.keys(personas)[i]];
         
         let is_change_now=true;
     	if (curr_persona_name.replace("_", " ") in all_movement[step]) {
     		if (execute_count == execute_count_max) { 
     			let curr_x = all_movement[step][curr_persona_name.replace("_", " ")]["movement"][0]
+
 	        let curr_y = all_movement[step][curr_persona_name.replace("_", " ")]["movement"][1]
     			movement_target[curr_persona_name] = [curr_x * tile_width, 
 	                                              curr_y * tile_width]; 
 	        let pronunciatio_content = all_movement[step][curr_persona_name.replace("_", " ")]["pronunciatio"];
+					let persona_chat_content = all_movement[step][curr_persona_name.replace("_", " ")]["chat"];
 	        let description_content = all_movement[step][curr_persona_name.replace("_", " ")]["description"];
 	        let chat_content_raw = all_movement[step][curr_persona_name.replace("_", " ")]["chat"];
             let real_name = all_movement[step][curr_persona_name.replace("_", " ")]["real_name"];
@@ -442,6 +516,18 @@
                 speech_bubbles[curr_persona_name].setAlpha(0);
                 // pronunciatios[curr_persona_name].setVisible(false);
             }
+					if (persona_chat_content != "") {
+								chat_boxes[curr_persona_name].setAlpha(1);
+								chats[curr_persona_name].setText(real_name + ":" + persona_chat_content);
+					}
+					// if (chat_content != "") {
+					// 			chat_box[curr_persona_name].setAlpha(1);
+          //       chat_content[curr_persona_name].setText(real_name + ":" + pronunciatio_content);
+          //   } else {
+					// 			chat_box[curr_persona_name].setText("");
+          //     	chat_content[curr_persona_name].setAlpha(0);
+          //       // pronunciatios[curr_persona_name].setVisible(false);
+          //   }
 	        // // Updating the status of each personas 
 	        document.getElementById("quick_emoji-"+curr_persona_name).innerHTML = pronunciatio_content;
 	        document.getElementById("current_action__"+curr_persona_name).innerHTML = description_content.split("@")[0];
@@ -479,6 +565,7 @@
             }
 	        curr_speech_bubble.x = curr_persona.body.x + 80; 
           curr_speech_bubble.y = curr_persona.body.y - 39;
+
           for (let j=i+1; j<Object.keys(personas).length; j++) {
                 let next_persona_name = Object.keys(personas)[j];
                 let next_persona = personas[next_persona_name];
