@@ -320,10 +320,10 @@
       chat_boxes[persona_name] = this.add.image(new_sprite.body.x - 30, 
                                                     new_sprite.body.y - 30,
                                                     'chat_box').setDepth(3);
-      chat_boxes[persona_name].displayWidth = 400;
-      chat_boxes[persona_name].displayHeight = 100;
+      chat_boxes[persona_name].displayWidth = 700;
+      chat_boxes[persona_name].displayHeight = 58;
       chats[persona_name] = this.add.text(
-                                    chat_boxes[persona_name].x - 200,  
+                                    chat_boxes[persona_name].x - 800,  
                                     chat_boxes[persona_name].y - chat_boxes[persona_name].displayHeight / 2 + 10,
                                      "", {
                                      font: "24px monospace", 
@@ -377,14 +377,21 @@
     // Get the current position of the cameras 
     let leftMostX = this.cameras.main.scrollX;
     let topMostY = this.cameras.main.scrollY;
+		let chat_box_x = 350; 
+		let chat_box_y = 700; 
+		let chat_x = 300; 
+		let chat_y = 20; 
     for (let persona_name in chat_boxes) {
             // Dynamically move the position of the chatbox
             let curr_chat_box = chat_boxes[persona_name];
             let curr_chat = chats[persona_name];
-            curr_chat_box.x = leftMostX + 350;
-            curr_chat_box.y = topMostY + 700;
-            curr_chat.x = curr_chat_box.x - 180;
-            curr_chat.y = curr_chat_box.y - 20;
+						// TODO: use this to change the location of the text and the chatbox
+						
+
+            curr_chat_box.x = leftMostX + chat_box_x;
+            curr_chat_box.y = topMostY + chat_box_y;
+            curr_chat.x = curr_chat_box.x - chat_x;
+            curr_chat.y = curr_chat_box.y - chat_y;
         
     }
 
@@ -406,10 +413,10 @@
             // Dynamically move the position of the chatbox
             let curr_chat_box = chat_boxes[persona_name];
             let curr_chat = chats[persona_name];
-            curr_chat_box.x = leftMostX + 350;
-            curr_chat_box.y = topMostY + 700;
-            curr_chat.x = curr_chat_box.x - 180;
-            curr_chat.y = curr_chat_box.y - 20;
+            curr_chat_box.x = leftMostX + chat_box_x;
+            curr_chat_box.y = topMostY + chat_box_y;
+            curr_chat.x = curr_chat_box.x - chat_x;
+            curr_chat.y = curr_chat_box.y - chat_y;
             curr_chat.setText( latest_person + " : " + latest_message);
         }
     }
