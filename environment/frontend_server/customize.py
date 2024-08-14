@@ -2,6 +2,7 @@ from maze import Maze
 from path_finder import path_finder
 from utils import *
 import json
+import copy 
 
 maze = Maze("1")
 col_maze = maze.collision_maze
@@ -41,7 +42,7 @@ def set_direction(persona, start_time, end_time, dir=None):
         # print(all_time)
         t = str(all_time)
         if persona not in move_data[t]:
-            move_data[t][persona] = get_last_data(persona, all_time)
+            move_data[t][persona] = copy.deepcopy(get_last_data(persona, all_time))
         # print(move_data[t][persona])
         move_data[t][persona]["face_dir"] = dir
         # print(move_data[t][persona])
@@ -124,18 +125,21 @@ def set_pos(persona, pos, time=0, pronunciatio='Hide', real_name=None, chat = ""
     if persona in move_data[time]:
         move_data[time][persona]['movement'] = [pos[0], pos[1]]
         move_data[time][persona]['real_name'] = real_name
+        move_data[time][persona]['pronunciatio'] = pronunciatio 
+        move_data[time][persona]["chat"] = chat
     else:
         move_data[time][persona] = {
-      "real_name": real_name,
-      "movement": [
-          pos[0],
-          pos[1]
-      ],
-      "pronunciatio": pronunciatio,
-      "description": "sleeping @ the Ville:Dorm for Oak Hill College:Klaus Mueller's room:bed",
-      "chat": chat,
-      "face_dir": None
-    }
+        "real_name": real_name,
+        "movement": [
+            pos[0],
+            pos[1]
+        ],
+        "pronunciatio": pronunciatio,
+        "description": "sleeping @ the Ville:Dorm for Oak Hill College:Klaus Mueller's room:bed",
+        "chat": chat,
+        "face_dir": None
+        }
+    print(time, move_data[time][persona]["chat"])
     with open(move_path, 'w') as file:
         json.dump(move_data, file, indent=2)
 # 'Isabella Rodriguez'
@@ -158,9 +162,9 @@ def toname(s):
     return to_official_name[s]
 
 init_pos = { # TODO
-    "Cam": adj_pos("the Ville:Johnson Park:park", coor=(7, -5)),
-    "Bid": adj_pos("the Ville:Johnson Park:park", stp=2),
-    "Dru": adj_pos("the Ville:Johnson Park:park", dir="right", stp=3)
+    "Cam": adj_pos("the Ville:artist's co-living space:Latoya Williams's room:bed", coor=(7, -5)),
+    "Bid": adj_pos("the Ville:artist's co-living space:Rajiv Patel's room:guitar", stp=2),
+    "Dru": adj_pos("the Ville:artist's co-living space:Abigail Chen's room:bed", dir="right", stp=3)
 }
 
 dru = "Dru"
@@ -170,32 +174,38 @@ all_agents = [dru, cam, bid]
 for agent in all_agents:
     set_pos(toname(agent), init_pos[agent], 0)
 
-# Outcome
-tstp = move(toname(dru), adj_pos(init_pos[cam], "left"), 5, chat="i am moving first")
+# Outcome - ending position 
+# Dru moves to work on his novel 
+tstp = move(toname(dru), adj_pos("the Ville:artist's co-living space:Abigail Chen's room:desk", coor=(0, 0)), 5, chat="")
+set_direction(toname(dru), tstp + 1, tstp + 10, 'l')
 
-set_direction(toname(dru), tstp, tstp + 6, 'r')
-# # Opposite Outcome
-# tstp = move(toname(dru), init_pos[dru], adj_pos(init_pos[cam], stp=0), 5)
+# Bid plays his guitar
+set_pos(to_official_name[bid], adj_pos(init_pos["Bid"], coor=(1,0)), tstp + 3, pronunciatio="🎵🎸")
+set_direction(toname(bid), tstp + 1, tstp + 10, 'u')
+
+# Dru hears the noise and becomes angry 
+set_pos(to_official_name[dru], adj_pos("the Ville:artist's co-living space:Abigail Chen's room:desk", coor=(0, 0)), tstp + 3, pronunciatio="😡😡")
+
+# Dru walks to Bid's house 
+tstp = move(toname(dru), adj_pos("the Ville:artist's co-living space:Rajiv Patel's room:guitar", coor=(0, 0)), tstp + 5)
+
+# Dru asks Bid to be quiet 
+print(tstp)
+set_pos(to_official_name[dru], adj_pos("the Ville:artist's co-living space:Rajiv Patel's room:guitar", coor=(0, 0)), tstp + 10, chat="I am trying to finish my novel but you are very loud.")
+# set_direction(toname(dru), tstp + 1, tstp + 10, 'l')
+
+# Bid apologizes and stops playing 
+set_pos(to_official_name[bid], adj_pos("the Ville:artist's co-living space:Rajiv Patel's room:guitar", coor=(1, 0)), tstp + 15, chat="Sorry, I will stop playing.")
+
+# Dru goes back to his house 
+tstp = move(toname(dru), adj_pos("the Ville:artist's co-living space:Abigail Chen's room:desk", coor=(0, 0)), tstp + 5)
 
 
-# Expression
-set_pos(to_official_name[cam], init_pos[cam], tstp + 3, pronunciatio="😔😭", chat="hi")
 
-# # Opposite Expression
-# set_pos(to_official_name[cam], init_pos[cam], tstp + 3, pronunciatio="😄😄")
-# quit()
-# # Action
-# ref = "the Ville:Adam Smith's house:main room:refrigerator"
-# n_tstp = move(toname(cam), init_pos[cam], init_pos[bid], tstp + 6)
-# n_tstp = move(toname(dru), adj_pos(init_pos[cam], "left"), init_pos[bid], tstp + 8)
-# nn_tstp = move(toname(cam), init_pos[bid], ref, n_tstp + 1)
-# nn_tstp = move(toname(bid), init_pos[bid], ref, n_tstp + 3)
-# nn_tstp = move(toname(dru), init_pos[bid], ref, n_tstp + 2)
+# Bid stops playing and goes to his bed 
 
-# Opposite Action
+# set_direction(toname(cam), 0, tstp + 20, 'l')
+# tstp = move(toname(cam), adj_pos(init_pos[cam], coor=(-1, -3)), tstp + 20, chat="I am moving")
 
-set_direction(toname(cam), 0, tstp + 20, 'l')
-tstp = move(toname(cam), adj_pos(init_pos[cam], coor=(-1, -3)), tstp + 20, chat="I am moving")
-
-tstp = move(toname(dru), adj_pos(init_pos[cam], "left"), tstp + 20, chat="i am moving to cam")
+# tstp = move(toname(dru), adj_pos(init_pos[cam], "left"), tstp + 20, chat="i am moving to cam")
 
