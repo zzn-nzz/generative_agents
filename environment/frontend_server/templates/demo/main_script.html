@@ -304,13 +304,13 @@
       speech_bubbles[persona_name] = this.add.image(new_sprite.body.x - 0, 
                                                     new_sprite.body.y - 30,
                                                     'speech_bubble').setDepth(3);
-      speech_bubbles[persona_name].displayWidth = 130;
-      speech_bubbles[persona_name].displayHeight = 58;
+      speech_bubbles[persona_name].displayWidth = 220;
+      speech_bubbles[persona_name].displayHeight = 78;
       pronunciatios[persona_name] = this.add.text(
-                                     new_sprite.body.x - 6, 
+                                     new_sprite.body.x - 3, 
                                      new_sprite.body.y - 42, 
                                      "🦁", {
-                                     font: "24px monospace", 
+                                     font: "36px monospace", 
                                      fill: "#000000", 
                                      padding: { x: 8, y: 8}, 
                                      border:"solid",
@@ -320,13 +320,13 @@
       chat_boxes[persona_name] = this.add.image(new_sprite.body.x - 30, 
                                                     new_sprite.body.y - 30,
                                                     'chat_box').setDepth(3);
-      chat_boxes[persona_name].displayWidth = 700;
-      chat_boxes[persona_name].displayHeight = 58;
+      chat_boxes[persona_name].displayWidth = 1500;
+      chat_boxes[persona_name].displayHeight = 100;
       chats[persona_name] = this.add.text(
                                     chat_boxes[persona_name].x - 800,  
                                     chat_boxes[persona_name].y - chat_boxes[persona_name].displayHeight / 2 + 10,
                                      "", {
-                                     font: "24px monospace", 
+                                     font: "36px monospace", 
                                      fill: "#000000", 
                                      padding: { x: 8, y: 8}, 
                                      border:"solid",
@@ -377,17 +377,15 @@
     // Get the current position of the cameras 
     let leftMostX = this.cameras.main.scrollX;
     let topMostY = this.cameras.main.scrollY;
-		let chat_box_x = 350; 
+		let chat_box_x = 750; 
 		let chat_box_y = 700; 
-		let chat_x = 300; 
-		let chat_y = 20; 
+		let chat_x = chat_box_x - 50; 
+		let chat_y = 30; 
     for (let persona_name in chat_boxes) {
             // Dynamically move the position of the chatbox
             let curr_chat_box = chat_boxes[persona_name];
             let curr_chat = chats[persona_name];
 						// TODO: use this to change the location of the text and the chatbox
-						
-
             curr_chat_box.x = leftMostX + chat_box_x;
             curr_chat_box.y = topMostY + chat_box_y;
             curr_chat.x = curr_chat_box.x - chat_x;
@@ -395,9 +393,9 @@
         
     }
 
-    console.log(leftMostX)
     var latest_message = null;
     var latest_person = null; 
+		//console.log(all_movement[step])
     for (let i=0; i<Object.keys(personas).length; i++) {
       let curr_persona_name = Object.keys(personas)[i];
       let curr_val = all_movement[step][curr_persona_name.replace("_", " ")]; 
@@ -557,7 +555,7 @@
                     } else {
                         anims_direction = "";
                     }
-                    curr_pronunciatio.x = curr_persona.body.x + 18;
+                    curr_pronunciatio.x = curr_persona.body.x + 10;
                     curr_pronunciatio.y = curr_persona.body.y - 42 - 25; // DEBUG 1 --- I added 32 offset on Dec 29. 
                     curr_speech_bubble.x = curr_persona.body.x + 80;
                     curr_speech_bubble.y = curr_persona.body.y - 39;
